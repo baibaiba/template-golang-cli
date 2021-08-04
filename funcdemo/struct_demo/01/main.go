@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 结构体
+// 结构体实例化
 func main() {
 	// 结构体的实例化方式
 	// 1.
