@@ -47,7 +47,7 @@ type Person struct {
 }
 
 type Person1 struct {
-	Name    string `json:"name"`
+	Name    string `json:"name"` // 也可以定义多个tag,(`json:"name" form:"username"`) key不需要双引号
 	Age     int    `json:"age"`
 	Address string `json:"address"`
 }
