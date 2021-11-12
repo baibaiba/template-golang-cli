@@ -32,7 +32,7 @@ func main() {
 	p4.start("")
 	p4.stop(0)
 	fmt.Printf("%#v,类型是：%T \n", p4, p4)
-	// 注意：实现接口必须实现接口中的所以方法，否则会报错
+	// 注意：实现接口必须实现接口中的所有方法，否则会报错
 }
 
 // 自定义一个接口类型(接口类名后建议加er后缀，表示接口类型)
@@ -43,7 +43,7 @@ type Usber interface {
 
 // 如果接口里面有方法，必须通过结构体或者自定义类型实现
 
-// Phone结构体实现Usber接口
+// Phone结构体
 type Phone struct {
 	Name string
 }
@@ -59,11 +59,24 @@ func (p Phone) start(x string) string {
 	return x
 }
 
+// Phone结构体实现Usber接口方法
 func (p Phone) stop(x int) int {
 	fmt.Println("main Phone stop")
 	return x
 }
 
-// Camera结构体实现Usber接口
+// Camera结构体
 type Camera struct {
+}
+
+// Camera结构体实现Usber接口方法
+func (c Camera) start(x string) string {
+	fmt.Println("main Camera start")
+	return x
+}
+
+// Camera结构体实现Usber接口方法
+func (c Camera) stop(x int) int {
+	fmt.Println("main Camera stop")
+	return x
 }
